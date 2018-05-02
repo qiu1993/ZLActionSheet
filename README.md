@@ -10,6 +10,8 @@
     有header标题 （单行纯文字） + 确认 + 取消
     header 单行文字 16号 常规体
     
+    
+
 ![001](https://github.com/qiu1993/ZLActionSheet/blob/master/image/001.jpg)
 
 
@@ -31,6 +33,8 @@
 
 ### 2、样式2
     无header标题（单行纯文字）+ 单行文字 + 多列 + 取消
+    
+
 ![002_01](https://github.com/qiu1993/ZLActionSheet/blob/master/image/002_01.jpg)
 ![002_02](https://github.com/qiu1993/ZLActionSheet/blob/master/image/002_02.jpg)
 
@@ -55,7 +59,11 @@
 主标题 16号字 中粗体
 
 有header标题（单行纯文字） + 多行文字（主副标题） + 多列 + 取消
+
+
 ![003_01](https://github.com/qiu1993/ZLActionSheet/blob/master/image/003_01.jpg)
+
+
 
 ![003_02](https://github.com/qiu1993/ZLActionSheet/blob/master/image/003_02.jpg)
 
@@ -82,6 +90,8 @@
 ### 4、样式4
 有header标题（单行纯文字 + 图片） + 多行文字（多行+多色） + 多列 + 取消
 
+
+
 ![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
 
 
@@ -105,7 +115,11 @@
 ### 5、样式5
 有header标题（单行纯文字 + 图片）+ 单行文字 + 多列 + 取消
 
+
+
 ![005](https://github.com/qiu1993/ZLActionSheet/blob/master/image/005.jpg)
+
+
 ``` swift
 // 有header标题（单行纯文字 + 图片）+ 单行文字 + 多列 + 取消
   // 显示文本
@@ -126,17 +140,10 @@
 ```
 ### 6、样式6
 有header标题（多行纯文字）+ 单行+单列 + 取消
-![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
 
-![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
-
-![006_](https://github.com/qiu1993/ZLActionSheet/blob/master/image/006_03.jpg)
-![Pasted Graphic 1.tiff](quiver-image-url/5659EC443DB710121011531AE7CB8E57.jpg =369x192)
-
-![Pasted Graphic 2.tiff](quiver-image-url/82FD5178FD7A8208B896D3F14B420244.jpg =473x223)
-
-![Pasted Graphic 4.tiff](quiver-image-url/7D21A738FCF1FE28C8DF1E53E593877D.jpg =353x255)
-
+![006_01](https://github.com/qiu1993/ZLActionSheet/blob/master/image/006_01.jpg)
+![006_02](https://github.com/qiu1993/ZLActionSheet/blob/master/image/006_02.jpg)
+![006_03](https://github.com/qiu1993/ZLActionSheet/blob/master/image/006_03.jpg)
 
 ``` swift
 // 有header标题（单行纯文字） + 多行文字（主副标题） + 多列 + 取消
