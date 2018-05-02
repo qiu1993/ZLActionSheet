@@ -31,8 +31,8 @@
 
 ### 2、样式2
     无header标题（单行纯文字）+ 单行文字 + 多列 + 取消
-![Pasted Graphic 4.tiff](quiver-image-url/CA96F56921C978F404E3F5AF2D6C3AAA.jpg =338x312)
-![Pasted Graphic 5.tiff](quiver-image-url/AF2309C2D5C270F364CE01190C070062.jpg =304x222)
+![002_01](https://github.com/qiu1993/ZLActionSheet/blob/master/image/002_01.jpg)
+![002_02](https://github.com/qiu1993/ZLActionSheet/blob/master/image/002_02.jpg)
 
 ``` swift
 // 无header标题（单行纯文字）+ 单行文字 + 多列 + 取消
@@ -55,9 +55,10 @@
 主标题 16号字 中粗体
 
 有header标题（单行纯文字） + 多行文字（主副标题） + 多列 + 取消
+![003_01](https://github.com/qiu1993/ZLActionSheet/blob/master/image/003_01.jpg)
 
-![Pasted Graphic 2.tiff](quiver-image-url/02901B18ADADC5B45AC287A26603112D.jpg =524x471)
-![Pasted Graphic 11.tiff](quiver-image-url/2DA60873635ED2E55EEA1AC21046E14D.jpg =554x356)
+![003_02](https://github.com/qiu1993/ZLActionSheet/blob/master/image/003_02.jpg)
+
 
 ``` swift
 // 有header标题（单行纯文字） + 多行文字（主副标题） + 多列 + 取消
@@ -81,7 +82,8 @@
 ### 4、样式4
 有header标题（单行纯文字 + 图片） + 多行文字（多行+多色） + 多列 + 取消
 
-![IMAGE](quiver-image-url/8C9E9F55C1BE3FA20203CD638B4E7705.jpg =492x348)
+![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
+
 
 ``` swift
 // 有header标题（单行纯文字 + 图片） + 多行文字（多行+多色） + 多列 + 取消
@@ -103,8 +105,7 @@
 ### 5、样式5
 有header标题（单行纯文字 + 图片）+ 单行文字 + 多列 + 取消
 
-![Pasted Graphic 9.tiff](quiver-image-url/E4FFF3D9DB0724D8EEBC80DBA41BDCF3.jpg =502x431)
-
+![005](https://github.com/qiu1993/ZLActionSheet/blob/master/image/005.jpg)
 ``` swift
 // 有header标题（单行纯文字 + 图片）+ 单行文字 + 多列 + 取消
   // 显示文本
@@ -125,7 +126,11 @@
 ```
 ### 6、样式6
 有header标题（多行纯文字）+ 单行+单列 + 取消
+![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
 
+![004](https://github.com/qiu1993/ZLActionSheet/blob/master/image/004.jpg)
+
+![006_](https://github.com/qiu1993/ZLActionSheet/blob/master/image/006_03.jpg)
 ![Pasted Graphic 1.tiff](quiver-image-url/5659EC443DB710121011531AE7CB8E57.jpg =369x192)
 
 ![Pasted Graphic 2.tiff](quiver-image-url/82FD5178FD7A8208B896D3F14B420244.jpg =473x223)
