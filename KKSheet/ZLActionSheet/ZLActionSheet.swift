@@ -3,7 +3,7 @@
 //  KKSheet
 //
 //  Created by Long on 2018/4/3.
-//  Copyright © 2018年 xincheng. All rights reserved.
+//  Copyright © 2018年 long. All rights reserved.
 //
 
 import Foundation
@@ -22,9 +22,9 @@ public class ZLActionSheet: UIViewController {
     public var actionSheetTitleFont: UIFont?
     public var actionSheetTitleColor: UIColor?
     public var headerTitle: String?
-    
-    /// 为了更好的融合到当前视图中，弹出框默认alpha是0.7，默认是true，如果你不想要半透明，可以设置为false
-    public var actionSheetTranslucent: Bool = true {
+    public var headerTitleFont: UIFont?
+    /// 为了更好的融合到当前视图中，弹出框本体默认alpha是0.7，默认是false，如果你想要半透明，可以设置为true
+    public var actionSheetTranslucent: Bool = false {
         didSet {
             if !actionSheetTranslucent {
                 self.tableView.alpha = 1.0
@@ -32,8 +32,8 @@ public class ZLActionSheet: UIViewController {
         }
     }
     
-    /// 弹出后，背景是半透明，默认是true，设置为false，则去掉半透明
-    public var translucent: Bool = true {
+    /// 弹出后，遮罩背景是半透明，默认是false，设置为true，则去掉半透明
+    public var translucent: Bool = false {
         didSet{
             if !translucent {
                 self.overlayView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0)
@@ -64,6 +64,7 @@ public class ZLActionSheet: UIViewController {
         self.hasCancelButton = hasCancelBtn
         self.hiddenHeaderImg = true
         self.multHeaderTitles = nil
+        self.headerTitleFont = UIFont.systemFont(ofSize: 16)
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = UIColor.clear
         self.providesPresentationContextTransitionStyle = true
@@ -71,14 +72,29 @@ public class ZLActionSheet: UIViewController {
         self.modalPresentationStyle = .custom
         setup()
     }
-
-    required public init(hasCancelBtn: Bool = false, mainTitleLists: [String]!, subTitleLists: [String]?, headerTipTitle: String = "", isHiddenTipImg: Bool = true, multHeaderTipTitles: [String]?) {
+    /**
+     init parameter.
+     - parameter hasCancelBtn: 是否有底部取消按钮.
+     - parameter mainTitleLists: 选项的主标题数组.
+     - parameter subTitleLists: 选项的副标题数组.
+     - parameter headerTipTitle: 顶部header文字.
+     - parameter isHiddenTipImg: 是否有顶部header提示图标.
+     - parameter isSubHeaderTilte: 顶部header文字是否是副标题样式.
+     - parameter multHeaderTipTitles: 顶部header是否是多行文字样式.
+     
+     */
+    required public init(hasCancelBtn: Bool = false, mainTitleLists: [String]!, subTitleLists: [String]?, headerTipTitle: String = "", isHiddenTipImg: Bool = true, isSubHeaderTilte: Bool = false, multHeaderTipTitles: [String]?) {
         self.headerTitle = headerTipTitle
         self.mainTitleLists = mainTitleLists
         self.subTitleLists = subTitleLists
         self.hasCancelButton = hasCancelBtn
         self.hiddenHeaderImg = isHiddenTipImg
         self.multHeaderTitles = multHeaderTipTitles
+        if isSubHeaderTilte == true {
+            self.headerTitleFont = UIFont.pingFang(16, .regular)
+        } else {
+            self.headerTitleFont = nil
+        }
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = UIColor.clear
         self.providesPresentationContextTransitionStyle = true
@@ -278,6 +294,16 @@ extension ZLActionSheet {
             cell.mainTitleLabel.textColor = UIColor.darkGray
         }
     }
+    
+    fileprivate func setHeaderTextFont(cell: ZLHeaderImgAndTextCell) {
+        if self.headerTitleFont != nil {
+            cell.singleTitleLabel.font = self.headerTitleFont
+            cell.singleTitleLabel.textColor = UIColor.darkGray
+        }else {
+            cell.singleTitleLabel.font = UIFont.pingFang(16, .semibold)
+        }
+    }
+
 }
 
 extension ZLActionSheet: UITableViewDataSource {
@@ -358,6 +384,7 @@ extension ZLActionSheet: UITableViewDataSource {
                         let cell: ZLHeaderImgAndTextCell = tableView.dequeueReusableCell(withIdentifier: headerImgAndTextRf, for: indexPath) as! ZLHeaderImgAndTextCell
                         cell.singleTitleLabel.text = self.headerTitle
                         cell.warningImgView.isHidden = self.hiddenHeaderImg
+                        setHeaderTextFont(cell: cell)
                         return cell
                     }
                     
@@ -386,6 +413,7 @@ extension ZLActionSheet: UITableViewDataSource {
                         let cell: ZLHeaderImgAndTextCell = tableView.dequeueReusableCell(withIdentifier: headerImgAndTextRf, for: indexPath) as! ZLHeaderImgAndTextCell
                         cell.singleTitleLabel.text = self.headerTitle
                         cell.warningImgView.isHidden = self.hiddenHeaderImg
+                        setHeaderTextFont(cell: cell)
                         return cell
                     }
                 default:
