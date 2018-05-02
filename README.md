@@ -10,7 +10,7 @@
     有header标题 （单行纯文字） + 确认 + 取消
     header 单行文字 16号 常规体
     
-![Pasted Graphic 3.tiff](quiver-image-url/C2B87D2B63557CD054FD7C43279B70CD.jpg =321x231)
+![001](https://github.com/qiu1993/ZLActionSheet/blob/master/image/001.jpg)
 
 
 ``` swift 
